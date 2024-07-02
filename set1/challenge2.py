@@ -4,11 +4,17 @@ Fixed XOR
   ^ 686974207468652062756c6c277320657965
 -------------------------------------------
     746865206b696420646f6e277420706c6179
+
+assert is use to validate the condition if false provides assertion error
 """
+
+def fixedXOR(x, y):
+    assert len(x) == len(y)
+    return hex(int(x,16)^int(y,16))[2:]
 
 hex1 = str(input("enter hex: "))
 hex2 = str(input())
 
-result = hex(int(hex1,16)^int(hex2,16))[2:]
+result = fixedXOR(hex1,hex2)
 
 print(result)
