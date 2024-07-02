@@ -1,4 +1,6 @@
 """
+HEX to BASE64 convert
+
 @input hex string from the user
 
 @returned by hex2base64: Byte encode of base64
