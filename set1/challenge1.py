@@ -20,11 +20,3 @@ def hex2base64(hex_string):
 hex_string = str(input("Enter hex: "))
 print(hex2base64(hex_string).decode())
 
-
-
-"""To check the answer is correct"""
-
-res = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
-
-if hex2base64(hex_string).decode() == res:
-    print("Correct")
