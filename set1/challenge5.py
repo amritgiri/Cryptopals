@@ -9,13 +9,15 @@ Challenge:
 def repeating_key_XOR(txt, key):
     ans_xor = []
     for i in range(len(txt)):
-        ans_xor.append(txt[i]^key[i%len(key)])
+        # ord function in python returns the unicode from the given character
+        # which in this case basically means the provided character is converted to integer using ord() 
+        ans_xor.append(ord(txt[i])^ord(key[i%len(key)]))
     return bytes(ans_xor)
 
 
 
 if __name__=="__main__":
-    txt = "Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal".encode("utf-8")
-    key = "ICE".encode("utf-8")
+    txt = "Burning 'em, if you ain't quick and nimble I go crazy when I hear a cymbal"
+    key = "ICE"
 
     print(repeating_key_XOR(txt,key).hex())
