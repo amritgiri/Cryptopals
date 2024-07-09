@@ -13,7 +13,7 @@ def find_random(text):
             return True
     return 0
 
-def decrypt_hex(cipher):
+def decrypt_xor(cipher):
     probable_text = {}
     for key in range(256):
         decrypt_cipher = ''.join(chr(c ^ key) for c in cipher)
