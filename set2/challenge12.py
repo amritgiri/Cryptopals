@@ -36,10 +36,8 @@ def break_AES_ECB(ct, block_size):
         except: return pt
     return pt
 
-def main():
+
+if __name__ == '__main__':
     block_size = detect_blocksize(oracle)
     assert(detect_mode(oracle(b'A' * 300)) == 'ECB')
     print(break_AES_ECB(oracle(b''), block_size).decode('utf-8'), end='')
-
-if __name__ == '__main__':
-    main()
