@@ -3,4 +3,4 @@ def validate_padding(text):
     return text.count(padding_length) == padding_length
 
 
-print(validate_padding(b"YELLOW SUBMARINE\x04\x04\x04\x04")) # True
+print(validate_padding(b"ICE ICE BABY\x04\x04\x04\x04")) # True
